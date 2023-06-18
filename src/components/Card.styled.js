@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   position: relative;
@@ -22,7 +22,7 @@ export const Logo = styled.div`
   width: 76px;
   height: 22px;
 
-  background-image: url("logo.png");
+  background-image: url('logo.png');
   background-size: cover;
 `;
 
@@ -34,7 +34,7 @@ export const Discuss = styled.div`
   width: 308px;
   height: 168px;
 
-  background-image: url("picture2 1.png");
+  background-image: url('picture2 1.png');
   background-size: cover;
 `;
 
@@ -43,7 +43,7 @@ export const Line = styled.div`
   left: 0;
   top: 214px;
 
-  width: 380px;
+  width: 100%;
   height: 8px;
 
   background-color: #ebd8ff;
@@ -51,20 +51,74 @@ export const Line = styled.div`
     inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.img`
   position: absolute;
-  top: 170px;
+  top: 178px;
   left: 150px;
 
   width: 80px;
   height: 80px;
 
-  background-image: url(${(props) => props.url || "Hansel.png"});
-  background-size: cover;
-
+  background: inherit;
   border-radius: 50%;
   border: 8px solid #ebd8ff;
-  /* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06),
-    inset 0px -2px 2px #ae7be3,
-    inset 0px 2px 3px #fbf8ff; */
+  overflow: hidden;
+`;
+
+export const InfoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 16px;
+`;
+
+export const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 26px;
+
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: 'Montserrat';
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+`;
+
+export const InfoText = styled.span`
+  font-weight: 500;
+  white-space: nowrap;
+  color: #ebd8ff;
+`;
+
+export const Button = styled.button`
+  width: 196px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+
+  background-color: ${props =>
+    props.bgc ? props.bgc : !props.active ? '#EBD8FF' : '#5CD3A8'};
+  box-shadow: 0px 3.5px 3.5px rgba(0, 0, 0, 0.25);
+  color: #373737;
+  font-size: 18px;
+
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: transform 0.2s ease-out;
+
+  &:hover , &:focus{
+    transform: scale(1.05);
+  }
 `;
