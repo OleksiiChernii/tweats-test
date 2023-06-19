@@ -4,12 +4,13 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 10px;
+  padding: 10px 0;
   @media (min-width: 768px) {
     display: block;
-    padding: 10px 0;
   }
-`;
+  `;
 
 export const WrapperContent = styled.div`
   display: flex;
