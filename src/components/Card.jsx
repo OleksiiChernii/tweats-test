@@ -12,11 +12,12 @@ import {
 } from './Card.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUsers } from '../redux/operations';
+import { selectFollowing } from 'redux/selectors';
 
 export const Card = prop => {
   const { user, tweets, followers, avatar } = prop;
   const dispatch = useDispatch();
-  const following = useSelector(state => state.users.following);
+  const following = useSelector(selectFollowing);
   const isFollowed = following.some(id => id === prop.id);
 
   const handler = () => {

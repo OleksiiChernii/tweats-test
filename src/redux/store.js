@@ -11,6 +11,7 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+import { filterReducer } from "./filter/slice";
 
 const userPersistConfig = {
   key: 'auth',
@@ -21,6 +22,7 @@ const userPersistConfig = {
 export const store = configureStore({
   reducer: {
     users: persistReducer(userPersistConfig, usersReducer),
+    filter: filterReducer
   },
   middleware: getDefaultMiddleware =>
   getDefaultMiddleware({

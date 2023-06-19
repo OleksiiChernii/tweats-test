@@ -1,16 +1,12 @@
-import { Card } from './components/Card';
 import React, { useEffect } from 'react';
-import { Container } from './App.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUsers, loadMore } from './redux/operations';
-import {
-  selectUsers,
-  selectIsLoading,
-  selectPage,
-  selectLoadMore,
-} from './redux/selectors';
+import { fetchUsers } from './redux/operations';
+import { selectIsLoading } from './redux/selectors';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout/Layout';
+import { Home } from './components/pages/Home';
+import { Tweets } from './components/pages/Tweets';
 import { Loader } from './components/Loader';
-import { Button } from './components/Card.styled';
 
 function App() {
   const dispatch = useDispatch();
@@ -19,26 +15,15 @@ function App() {
   }, [dispatch]);
 
   const isLoading = useSelector(selectIsLoading);
-  const showLoadMore = useSelector(selectLoadMore);
-  const users = useSelector(selectUsers);
-  const page = useSelector(selectPage);
-  const handler = () => {
-    dispatch(loadMore(page));
-  };
-
   return (
     <>
       {isLoading && <Loader />}
-      <Container>
-        {users.map(user => (
-          <Card key={user.id} {...user} />
-        ))}
-        {!isLoading && showLoadMore && (
-          <Button onClick={handler} bgc="rgb(14 165 233)">
-            Load more
-          </Button>
-        )}
-      </Container>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="tweets" element={<Tweets />} />
+          </Route>
+        </Routes>
     </>
   );
 }

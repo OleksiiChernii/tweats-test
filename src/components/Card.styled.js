@@ -22,7 +22,7 @@ export const Logo = styled.div`
   width: 76px;
   height: 22px;
 
-  background-image: url('logo.png');
+  background-image: url('./images/logo.png');
   background-size: cover;
 `;
 
@@ -34,7 +34,7 @@ export const Discuss = styled.div`
   width: 308px;
   height: 168px;
 
-  background-image: url('picture2 1.png');
+  background-image: url('images/picture.png');
   background-size: cover;
 `;
 
