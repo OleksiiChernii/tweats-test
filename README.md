@@ -1,6 +1,6 @@
 # Мета: створити картки твітів та додати інтерактивності при клікові на кнопку.
 
-![Тестовий макет](./assets/image.ng)
+![Тестовий макет](./assets/image.png)
 
 ## Технічне завдання
 
@@ -33,7 +33,7 @@
    підгружатись при натисканні Load More
 4. Решта вимог аналогічні до вищеописаного технічного завдання.
 
-![Макет](https://www.figma.com/file/zun1oP6NmS2Lmgbcj6e1IG/Test?node-id=0%3A1&t=VoiYTfiXggVItgVd-1)
+[Макет](https://www.figma.com/file/zun1oP6NmS2Lmgbcj6e1IG/Test?node-id=0%3A1&t=VoiYTfiXggVItgVd-1)
 
 
 ## Додаткове завдання
