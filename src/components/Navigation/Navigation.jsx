@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper, NavigationNav, NavigationLink } from './Navigation.styled';
 import { useLocation } from 'react-router-dom';
-import { RadioButtons } from './RadioButtons';
+import { DropdownMenu } from './DropDownMenu';
 
 export const Navigation = () => {
   const location = useLocation();
@@ -12,7 +12,7 @@ export const Navigation = () => {
         <NavigationLink to="/">Home</NavigationLink>
         <NavigationLink to="/tweets">Tweets</NavigationLink>
       </NavigationNav>
-      {isTweets && <RadioButtons />}
+      {isTweets && <DropdownMenu />}
     </Wrapper>
   );
 };

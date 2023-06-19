@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   @media (min-width: 768px) {
     display: block;
   }
-  `;
+`;
 
 export const WrapperContent = styled.div`
   display: flex;
