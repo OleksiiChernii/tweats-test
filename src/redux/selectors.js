@@ -13,6 +13,7 @@ export const selectUsers = state => {
     }
 };
 export const selectFilter = state => state.filter.filter;
+export const selectOptions = state => state.filter.options;
 export const selectIsLoading = state => state.users.isLoading;
 export const selectPage = state => state.users.page;
 export const selectLoadMore = state => state.users.showLoadMore;

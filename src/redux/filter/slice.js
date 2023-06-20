@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   filter: 'all',
+  options: ['all', 'follow', 'following']
 };
 
 const filterSlice = createSlice({
